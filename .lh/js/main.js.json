@@ -1,0 +1,26 @@
+{
+    "sourceFile": "js/main.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1658254870718,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1658254934832,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n const controle = document.querySelectorAll(\"[data-controle]\");\r\n-const estatistica = document.querySelectorAll(\"[data-estatistica]\")\r\n+const estatistica = document.querySelectorAll(\"[data-estatistica]\");\r\n \r\n const pecas = {\r\n     \"bracos\": {\r\n         \"forca\": 29,\r\n"
+                },
+                {
+                    "date": 1658255779566,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,8 +40,9 @@\n \r\n     const pega = evento.target;\r\n \r\n     manipulaDados(pega.dataset.controle, pega.parentNode);\r\n+    atualizaEstatistica(pega.dataset.peca);\r\n   });\r\n });\r\n \r\n function manipulaDados(operacao, controle) {\r\n"
+                }
+            ],
+            "date": 1658254870718,
+            "name": "Commit-0",
+            "content": "const controle = document.querySelectorAll(\"[data-controle]\");\r\nconst estatistica = document.querySelectorAll(\"[data-estatistica]\")\r\n\r\nconst pecas = {\r\n    \"bracos\": {\r\n        \"forca\": 29,\r\n        \"poder\": 35,\r\n        \"energia\": -21,\r\n        \"velocidade\": -5\r\n    },\r\n\r\n    \"blindagem\": {\r\n        \"forca\": 41,\r\n        \"poder\": 20,\r\n        \"energia\": 0,\r\n        \"velocidade\": -20\r\n    },\r\n    \"nucleos\":{\r\n        \"forca\": 0,\r\n        \"poder\": 7,\r\n        \"energia\": 48,\r\n        \"velocidade\": -24\r\n    },\r\n    \"pernas\":{\r\n        \"forca\": 27,\r\n        \"poder\": 21,\r\n        \"energia\": -32,\r\n        \"velocidade\": 42\r\n    },\r\n    \"foguetes\":{\r\n        \"forca\": 0,\r\n        \"poder\": 28,\r\n        \"energia\": 0,\r\n        \"velocidade\": -2\r\n    }\r\n}\r\n\r\ncontrole.forEach((elemento) => {\r\n  elemento.addEventListener(\"click\", (evento) => {\r\n\r\n    const pega = evento.target;\r\n\r\n    manipulaDados(pega.dataset.controle, pega.parentNode);\r\n  });\r\n});\r\n\r\nfunction manipulaDados(operacao, controle) {\r\n\r\n  const peca = controle.querySelector(\"[data-contador]\");\r\n\r\n  if (operacao === '-') {\r\n    peca.value = parseInt(peca.value) - 1;\r\n  } else {\r\n    peca.value = parseInt(peca.value) + 1;\r\n  }\r\n}\r\n\r\nfunction atualizaEstatistica(peca) {\r\n  estatistica.forEach( (elemento ) => {\r\n      elemento.textContent = parseInt(elemento.textContent) + pecas[peca][elemento.dataset.estatistica]\r\n  })\r\n}"
+        }
+    ]
+}

@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 10,
+            "activePatchIndex": 31,
             "patches": [
                 {
                     "date": 1658237898362,
@@ -48,6 +48,90 @@
                 {
                     "date": 1658240744377,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n const robotron = document.querySelector(\"#robotron\");\r\n \r\n-robotron.addEventListener(\"click\", () => {\r\n-  console.log(\"Cliquei no robô.\");\r\n+robotron.addEventListener(\"click\", (evento) => {\r\n+  console.log(evento);\r\n });\r\n \r\n function dizOi(nome) {\r\n   console.log(nome);\r\n\\ No newline at end of file\n   console.log(\"Bem-vindo ao Robotron 2000\");\r\n-}\n+} \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1658242575503,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,4 @@\n-const robotron = document.querySelector(\"#robotron\");\r\n+const subtrair = documento.querySelector(\"#subtrair\");\r\n+const somar = document.querySelector(\"#somar\");\r\n+const braco = document.querySelector(\"#braco\");\r\n \r\n-robotron.addEventListener(\"click\", (evento) => {\r\n-  console.log(evento);\r\n-});\r\n-\r\n-function dizOi(nome) {\r\n\\ No newline at end of file\n-  console.log(nome);\r\n-  console.log(\"Bem-vindo ao Robotron 2000\");\r\n-} \n"
+                },
+                {
+                    "date": 1658242698051,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,11 @@\n const subtrair = documento.querySelector(\"#subtrair\");\r\n const somar = document.querySelector(\"#somar\");\r\n const braco = document.querySelector(\"#braco\");\r\n \r\n+somar.addEventListener(\"click\", (evento) => {\r\n+  braco.value++;\r\n+});\r\n+\r\n+subtrair.addEventListener(\"click\", (evento) => {\r\n+\r\n+});\r\n"
+                },
+                {
+                    "date": 1658242724358,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-const subtrair = documento.querySelector(\"#subtrair\");\r\n+const subtrair = document.querySelector(\"#subtrair\");\r\n const somar = document.querySelector(\"#somar\");\r\n const braco = document.querySelector(\"#braco\");\r\n \r\n somar.addEventListener(\"click\", (evento) => {\r\n"
+                },
+                {
+                    "date": 1658242760122,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,6 +6,6 @@\n   braco.value++;\r\n });\r\n \r\n subtrair.addEventListener(\"click\", (evento) => {\r\n-\r\n+  braco.value--;\r\n });\r\n"
+                },
+                {
+                    "date": 1658242911645,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n const somar = document.querySelector(\"#somar\");\r\n const braco = document.querySelector(\"#braco\");\r\n \r\n somar.addEventListener(\"click\", (evento) => {\r\n-  braco.value++;\r\n+  braco.value = parseInt(braco.value) + 1;\r\n });\r\n \r\n subtrair.addEventListener(\"click\", (evento) => {\r\n   braco.value--;\r\n"
+                },
+                {
+                    "date": 1658242950930,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,6 +6,6 @@\n   braco.value = parseInt(braco.value) + 1;\r\n });\r\n \r\n subtrair.addEventListener(\"click\", (evento) => {\r\n-  braco.value--;\r\n+  braco.value = parseInt(braco.value) - 1;\r\n });\r\n"
+                },
+                {
+                    "date": 1658247020382,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,15 @@\n const subtrair = document.querySelector(\"#subtrair\");\r\n const somar = document.querySelector(\"#somar\");\r\n const braco = document.querySelector(\"#braco\");\r\n \r\n-somar.addEventListener(\"click\", (evento) => {\r\n-  braco.value = parseInt(braco.value) + 1;\r\n-});\r\n+somar.addEventListener(\"click\", (evento) => {manipulaDados(\"somar\")});\r\n \r\n-subtrair.addEventListener(\"click\", (evento) => {\r\n-  braco.value = parseInt(braco.value) - 1;\r\n-});\r\n+subtrair.addEventListener(\"click\", (evento) => {manipulaDados(\"subtrair\")});\r\n+\r\n+function manipulaDados(operacao) {\r\n+  if (operacao === 'subtrair') {\r\n+    braco.value = parseInt(braco.value) - 1;\r\n+  } else {\r\n+    braco.value = parseInt(braco.value) + 1;\r\n+  }\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1658247141173,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,10 @@\n const subtrair = document.querySelector(\"#subtrair\");\r\n const somar = document.querySelector(\"#somar\");\r\n const braco = document.querySelector(\"#braco\");\r\n \r\n+const controle = document.querySelectorAll(\".controle\");\r\n+\r\n somar.addEventListener(\"click\", (evento) => {manipulaDados(\"somar\")});\r\n \r\n subtrair.addEventListener(\"click\", (evento) => {manipulaDados(\"subtrair\")});\r\n \r\n"
+                },
+                {
+                    "date": 1658247574528,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,16 @@\n const subtrair = document.querySelector(\"#subtrair\");\r\n const somar = document.querySelector(\"#somar\");\r\n const braco = document.querySelector(\"#braco\");\r\n \r\n-const controle = document.querySelectorAll(\".controle\");\r\n+const controle = document.querySelectorAll(\".controle-ajuste\");\r\n \r\n+controle.forEach((elemento) => {\r\n+  elemento.addEventListener(\"click\", () => {\r\n+    manipulaDados(elemento.className);\r\n+  });\r\n+});\r\n+\r\n somar.addEventListener(\"click\", (evento) => {manipulaDados(\"somar\")});\r\n \r\n subtrair.addEventListener(\"click\", (evento) => {manipulaDados(\"subtrair\")});\r\n \r\n"
+                },
+                {
+                    "date": 1658247651974,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,10 @@\n \r\n const controle = document.querySelectorAll(\".controle-ajuste\");\r\n \r\n controle.forEach((elemento) => {\r\n-  elemento.addEventListener(\"click\", () => {\r\n-    manipulaDados(elemento.className);\r\n+  elemento.addEventListener(\"click\", (evento) => {\r\n+    manipulaDados(evento.target);\r\n   });\r\n });\r\n \r\n somar.addEventListener(\"click\", (evento) => {manipulaDados(\"somar\")});\r\n"
+                },
+                {
+                    "date": 1658247779313,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,16 +5,12 @@\n const controle = document.querySelectorAll(\".controle-ajuste\");\r\n \r\n controle.forEach((elemento) => {\r\n   elemento.addEventListener(\"click\", (evento) => {\r\n-    manipulaDados(evento.target);\r\n+    manipulaDados(evento.target.textContent);\r\n   });\r\n });\r\n \r\n-somar.addEventListener(\"click\", (evento) => {manipulaDados(\"somar\")});\r\n-\r\n-subtrair.addEventListener(\"click\", (evento) => {manipulaDados(\"subtrair\")});\r\n-\r\n function manipulaDados(operacao) {\r\n   if (operacao === 'subtrair') {\r\n     braco.value = parseInt(braco.value) - 1;\r\n   } else {\r\n"
+                },
+                {
+                    "date": 1658248852520,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,4 @@\n-const subtrair = document.querySelector(\"#subtrair\");\r\n-const somar = document.querySelector(\"#somar\");\r\n-const braco = document.querySelector(\"#braco\");\r\n-\r\n const controle = document.querySelectorAll(\".controle-ajuste\");\r\n \r\n controle.forEach((elemento) => {\r\n   elemento.addEventListener(\"click\", (evento) => {\r\n@@ -10,8 +6,11 @@\n   });\r\n });\r\n \r\n function manipulaDados(operacao) {\r\n+\r\n+  const peca = document.querySelector(\".controle-contador\");\r\n+\r\n   if (operacao === 'subtrair') {\r\n     braco.value = parseInt(braco.value) - 1;\r\n   } else {\r\n     braco.value = parseInt(braco.value) + 1;\r\n"
+                },
+                {
+                    "date": 1658248900020,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n const controle = document.querySelectorAll(\".controle-ajuste\");\r\n \r\n controle.forEach((elemento) => {\r\n   elemento.addEventListener(\"click\", (evento) => {\r\n-    manipulaDados(evento.target.textContent);\r\n+    manipulaDados(evento.target.textContent, evento.target.parentNode);\r\n   });\r\n });\r\n \r\n function manipulaDados(operacao) {\r\n"
+                },
+                {
+                    "date": 1658248935886,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,11 +5,11 @@\n     manipulaDados(evento.target.textContent, evento.target.parentNode);\r\n   });\r\n });\r\n \r\n-function manipulaDados(operacao) {\r\n+function manipulaDados(operacao, controle) {\r\n \r\n-  const peca = document.querySelector(\".controle-contador\");\r\n+  const peca = controle.querySelector(\".controle-contador\");\r\n \r\n   if (operacao === 'subtrair') {\r\n     braco.value = parseInt(braco.value) - 1;\r\n   } else {\r\n"
+                },
+                {
+                    "date": 1658249085580,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n \r\n   const peca = controle.querySelector(\".controle-contador\");\r\n \r\n   if (operacao === 'subtrair') {\r\n-    braco.value = parseInt(braco.value) - 1;\r\n+    peca.value = parseInt(braco.value) - 1;\r\n   } else {\r\n-    braco.value = parseInt(braco.value) + 1;\r\n+    peca.value = parseInt(braco.value) + 1;\r\n   }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1658249096913,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n \r\n   const peca = controle.querySelector(\".controle-contador\");\r\n \r\n   if (operacao === 'subtrair') {\r\n-    peca.value = parseInt(braco.value) - 1;\r\n+    peca.value = parseInt(peca.value) - 1;\r\n   } else {\r\n-    peca.value = parseInt(braco.value) + 1;\r\n+    peca.value = parseInt(peca.value) + 1;\r\n   }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1658249152806,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n function manipulaDados(operacao, controle) {\r\n \r\n   const peca = controle.querySelector(\".controle-contador\");\r\n \r\n-  if (operacao === 'subtrair') {\r\n+  if (operacao === '-') {\r\n     peca.value = parseInt(peca.value) - 1;\r\n   } else {\r\n     peca.value = parseInt(peca.value) + 1;\r\n   }\r\n"
+                },
+                {
+                    "date": 1658249687944,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-const controle = document.querySelectorAll(\".controle-ajuste\");\r\n+const controle = document.querySelectorAll(\"[data-controle]\");\r\n \r\n controle.forEach((elemento) => {\r\n   elemento.addEventListener(\"click\", (evento) => {\r\n     manipulaDados(evento.target.textContent, evento.target.parentNode);\r\n"
+                },
+                {
+                    "date": 1658249842128,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,12 @@\n const controle = document.querySelectorAll(\"[data-controle]\");\r\n \r\n controle.forEach((elemento) => {\r\n   elemento.addEventListener(\"click\", (evento) => {\r\n-    manipulaDados(evento.target.textContent, evento.target.parentNode);\r\n+\r\n+    const pega = evento.target;\r\n+\r\n+    manipulaDados(pega.dataset.controle, pega.parentNode);\r\n   });\r\n });\r\n \r\n function manipulaDados(operacao, controle) {\r\n"
+                },
+                {
+                    "date": 1658249957181,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n });\r\n \r\n function manipulaDados(operacao, controle) {\r\n \r\n-  const peca = controle.querySelector(\".controle-contador\");\r\n+  const peca = controle.querySelector(\"[data-contador]\");\r\n \r\n   if (operacao === '-') {\r\n     peca.value = parseInt(peca.value) - 1;\r\n   } else {\r\n"
+                },
+                {
+                    "date": 1658254793875,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,41 @@\n const controle = document.querySelectorAll(\"[data-controle]\");\r\n+const estatistica = document.querySelectorAll(\"[data-estatistica]\")\r\n \r\n+const pecas = {\r\n+    \"bracos\": {\r\n+        \"forca\": 29,\r\n+        \"poder\": 35,\r\n+        \"energia\": -21,\r\n+        \"velocidade\": -5\r\n+    },\r\n+\r\n+    \"blindagem\": {\r\n+        \"forca\": 41,\r\n+        \"poder\": 20,\r\n+        \"energia\": 0,\r\n+        \"velocidade\": -20\r\n+    },\r\n+    \"nucleos\":{\r\n+        \"forca\": 0,\r\n+        \"poder\": 7,\r\n+        \"energia\": 48,\r\n+        \"velocidade\": -24\r\n+    },\r\n+    \"pernas\":{\r\n+        \"forca\": 27,\r\n+        \"poder\": 21,\r\n+        \"energia\": -32,\r\n+        \"velocidade\": 42\r\n+    },\r\n+    \"foguetes\":{\r\n+        \"forca\": 0,\r\n+        \"poder\": 28,\r\n+        \"energia\": 0,\r\n+        \"velocidade\": -2\r\n+    }\r\n+}\r\n+\r\n controle.forEach((elemento) => {\r\n   elemento.addEventListener(\"click\", (evento) => {\r\n \r\n     const pega = evento.target;\r\n"
                 }
             ],
             "date": 1658237898362,

@@ -1,0 +1,46 @@
+{
+    "sourceFile": "Desafio_3/index.html",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1658250734325,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1658250793009,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,6 +19,7 @@\n   </ul>\r\n \r\n   <a href=\"https://alura.com.br/\" target=\"_blank\"><img src=\"https://www.alura.com.br/assets/img/home/alura-logo.svg\" alt=\"\" class=\"alura-logo\"></a>\r\n \r\n+  <script src=\"./script.js\"></script>\r\n </body>\r\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1658250969942,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,7 +19,10 @@\n   </ul>\r\n \r\n   <a href=\"https://alura.com.br/\" target=\"_blank\"><img src=\"https://www.alura.com.br/assets/img/home/alura-logo.svg\" alt=\"\" class=\"alura-logo\"></a>\r\n \r\n+  <button>Some lista</button>\r\n+  <button>Exibe lista</button>\r\n+  \r\n   <script src=\"./script.js\"></script>\r\n </body>\r\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1658251017464,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,10 +19,10 @@\n   </ul>\r\n \r\n   <a href=\"https://alura.com.br/\" target=\"_blank\"><img src=\"https://www.alura.com.br/assets/img/home/alura-logo.svg\" alt=\"\" class=\"alura-logo\"></a>\r\n \r\n-  <button>Some lista</button>\r\n-  <button>Exibe lista</button>\r\n+  <button class=\"some\">Some lista</button>\r\n+  <button class=\"exibe\">Exibe lista</button>\r\n   \r\n   <script src=\"./script.js\"></script>\r\n </body>\r\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1658251831278,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,10 +19,10 @@\n   </ul>\r\n \r\n   <a href=\"https://alura.com.br/\" target=\"_blank\"><img src=\"https://www.alura.com.br/assets/img/home/alura-logo.svg\" alt=\"\" class=\"alura-logo\"></a>\r\n \r\n-  <button class=\"some\">Some lista</button>\r\n-  <button class=\"exibe\">Exibe lista</button>\r\n+  <button id=\"botao\">Some lista</button>\r\n+  <button class=\"close\">Exibe lista</button>\r\n   \r\n   <script src=\"./script.js\"></script>\r\n </body>\r\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1658252011760,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,8 @@\n   </ul>\r\n \r\n   <a href=\"https://alura.com.br/\" target=\"_blank\"><img src=\"https://www.alura.com.br/assets/img/home/alura-logo.svg\" alt=\"\" class=\"alura-logo\"></a>\r\n \r\n-  <button id=\"botao\">Some lista</button>\r\n   <button class=\"close\">Exibe lista</button>\r\n   \r\n   <script src=\"./script.js\"></script>\r\n </body>\r\n"
+                },
+                {
+                    "date": 1658252094511,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   <link rel=\"stylesheet\" href=\"./style.css\">\r\n </head>\r\n <body>\r\n \r\n-  <button onclick=\"mostraTintas(this)\">Aluratintas em estoque:</button>\r\n+  <button id=\"botao\">Aluratintas em estoque:</button>\r\n \r\n   <ul class=\"lista\">\r\n     <li cor=\"laranja\" tipo=\"tinta-exterior\" class=\"item\">Tinta laranja</li>\r\n     <li cor=\"vermelho\" tipo=\"tinta-interior\" class=\"item\">Tinta vermelha</li>\r\n"
+                },
+                {
+                    "date": 1658254215587,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,27 @@\n+<!DOCTYPE html>\r\n+<html lang=\"en\" >\r\n+<head>\r\n+  <meta charset=\"UTF-8\">\r\n+  <title>Manipulando o DOM - Aula 3</title>\r\n+  <link rel=\"stylesheet\" href=\"./style.css\">\r\n+</head>\r\n+<body>\r\n+\r\n+  <button onclick=\"mostraTintas(this)\">Aluratintas em estoque:</button>\r\n+\r\n+  <ul class=\"lista\">\r\n+    <li cor=\"laranja\" tipo=\"tinta-exterior\" class=\"item\">Tinta laranja</li>\r\n+    <li cor=\"vermelho\" tipo=\"tinta-interior\" class=\"item\">Tinta vermelha</li>\r\n+    <li cor=\"branco\" tipo=\"tinta-interior\" class=\"item\">Tinta branca</li>\r\n+    <li cor=\"amarelo\" tipo=\"tinta-exterior\" class=\"item\">Tinta amarela</li>\r\n+    <li cor=\"rosa\" tipo=\"tinta-exterior\" class=\"item\">Tinta rosa</li>\r\n+    <li cor=\"preto\" tipo=\"tinta-exterior\" class=\"item\">Tinta preta</li>\r\n+  </ul>\r\n+\r\n+  <a href=\"https://alura.com.br/\" target=\"_blank\"><img src=\"https://www.alura.com.br/assets/img/home/alura-logo.svg\" alt=\"\" class=\"alura-logo\"></a>\r\n+\r\n+  <button class=\"close\">Exibe lista</button>\r\n+  \r\n+  <script src=\"./script.js\"></script>\r\n+</body>\r\n+</html>\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1658250734325,
+            "name": "Commit-0",
+            "content": "<!DOCTYPE html>\r\n<html lang=\"en\" >\r\n<head>\r\n  <meta charset=\"UTF-8\">\r\n  <title>Manipulando o DOM - Aula 3</title>\r\n  <link rel=\"stylesheet\" href=\"./style.css\">\r\n</head>\r\n<body>\r\n\r\n  <button onclick=\"mostraTintas(this)\">Aluratintas em estoque:</button>\r\n\r\n  <ul class=\"lista\">\r\n    <li cor=\"laranja\" tipo=\"tinta-exterior\" class=\"item\">Tinta laranja</li>\r\n    <li cor=\"vermelho\" tipo=\"tinta-interior\" class=\"item\">Tinta vermelha</li>\r\n    <li cor=\"branco\" tipo=\"tinta-interior\" class=\"item\">Tinta branca</li>\r\n    <li cor=\"amarelo\" tipo=\"tinta-exterior\" class=\"item\">Tinta amarela</li>\r\n    <li cor=\"rosa\" tipo=\"tinta-exterior\" class=\"item\">Tinta rosa</li>\r\n    <li cor=\"preto\" tipo=\"tinta-exterior\" class=\"item\">Tinta preta</li>\r\n  </ul>\r\n\r\n  <a href=\"https://alura.com.br/\" target=\"_blank\"><img src=\"https://www.alura.com.br/assets/img/home/alura-logo.svg\" alt=\"\" class=\"alura-logo\"></a>\r\n\r\n</body>\r\n</html>"
+        }
+    ]
+}
