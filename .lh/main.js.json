@@ -1,0 +1,58 @@
+{
+    "sourceFile": "main.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 10,
+            "patches": [
+                {
+                    "date": 1658237898362,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1658238059835,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-alert('oi');\n\\ No newline at end of file\n+document.querySelector(\"#robotron\").addEventListener(\"click\", console.log(\"oi você clicou\"));\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1658238143869,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,5 @@\n-document.querySelector(\"#robotron\").addEventListener(\"click\", console.log(\"oi você clicou\"));\n\\ No newline at end of file\n+document.querySelector(\"#robotron\").addEventListener(\"click\", console.log(\"oi você clicou\"));\r\n+\r\n+function dizOi() {\r\n+  console.log(\"oi\");\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1658238257058,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-document.querySelector(\"#robotron\").addEventListener(\"click\", console.log(\"oi você clicou\"));\r\n+document.querySelector(\"#robotron\").addEventListener(\"click\");\r\n \r\n function dizOi() {\r\n   console.log(\"oi\");\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1658238276254,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-document.querySelector(\"#robotron\").addEventListener(\"click\");\r\n+document.querySelector(\"#robotron\").addEventListener(\"click\", dizOi);\r\n \r\n function dizOi() {\r\n   console.log(\"oi\");\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1658238350068,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n-document.querySelector(\"#robotron\").addEventListener(\"click\", dizOi);\r\n+const robotron = document.querySelector(\"#robotron\");\r\n \r\n+robotron.addEventListener(\"click\", dizOi);\r\n+\r\n function dizOi() {\r\n   console.log(\"oi\");\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1658240481696,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,8 @@\n+const robotron = document.querySelector(\"#robotron\");\r\n+\r\n+robotron.addEventListener(\"click\", dizOi);\r\n+\r\n+function dizOi() {\r\n+  console.log(\"oi\");\r\n+  console.log(\"Bem-vindo ao Robotron 2000\");\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1658240559550,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,10 @@\n const robotron = document.querySelector(\"#robotron\");\r\n \r\n-robotron.addEventListener(\"click\", dizOi);\r\n+robotron.addEventListener(\"click\", function() {\r\n+  console.log(\"Cliquei no robô.\");\r\n+});\r\n \r\n function dizOi() {\r\n   console.log(\"oi\");\r\n   console.log(\"Bem-vindo ao Robotron 2000\");\r\n-}\n-const robotron = document.querySelector(\"#robotron\");\r\n-\r\n-robotron.addEventListener(\"click\", dizOi);\r\n-\r\n-function dizOi() {\r\n-  console.log(\"oi\");\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1658240599683,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n const robotron = document.querySelector(\"#robotron\");\r\n \r\n-robotron.addEventListener(\"click\", function() {\r\n+robotron.addEventListener(\"click\", () => {\r\n   console.log(\"Cliquei no robô.\");\r\n });\r\n \r\n function dizOi() {\r\n"
+                },
+                {
+                    "date": 1658240645463,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,8 @@\n robotron.addEventListener(\"click\", () => {\r\n   console.log(\"Cliquei no robô.\");\r\n });\r\n \r\n-function dizOi() {\r\n-  console.log(\"oi\");\r\n+function dizOi(nome) {\r\n+  console.log(nome);\r\n   console.log(\"Bem-vindo ao Robotron 2000\");\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1658240744377,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n const robotron = document.querySelector(\"#robotron\");\r\n \r\n-robotron.addEventListener(\"click\", () => {\r\n-  console.log(\"Cliquei no robô.\");\r\n+robotron.addEventListener(\"click\", (evento) => {\r\n+  console.log(evento);\r\n });\r\n \r\n function dizOi(nome) {\r\n   console.log(nome);\r\n\\ No newline at end of file\n   console.log(\"Bem-vindo ao Robotron 2000\");\r\n-}\n+} \n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1658237898362,
+            "name": "Commit-0",
+            "content": "alert('oi');"
+        }
+    ]
+}

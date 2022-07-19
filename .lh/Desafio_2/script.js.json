@@ -1,0 +1,26 @@
+{
+    "sourceFile": "Desafio_2/script.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1658241872064,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1658241935517,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n const calcular = document.querySelector(\"#calcular\");\r\n \r\n calcular.addEventListener('click', () => {\r\n-  alert('Fui clicado');\r\n+  calcular.innerHTML = \"Fui clicado\";\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1658242035522,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n const calcular = document.querySelector(\"#calcular\");\r\n+const resultado = document.querySelector('.resultado');\r\n \r\n calcular.addEventListener('click', () => {\r\n-  calcular.innerHTML = \"Fui clicado\";\r\n+  resultado.innerHTML = \"Fui clicado\";\r\n })\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1658241872064,
+            "name": "Commit-0",
+            "content": "const calcular = document.querySelector(\"#calcular\");\r\n\r\ncalcular.addEventListener('click', () => {\r\n  alert('Fui clicado');\r\n})"
+        }
+    ]
+}
